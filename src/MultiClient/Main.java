@@ -1,6 +1,6 @@
-package server.multiclient;
+package MultiClient;
 
-public class MultiClientServerMain {
+class Main {
     public static void main(String[] args) {
         MultiClientServer multiClientServer = new MultiClientServer();
         multiClientServer.start();

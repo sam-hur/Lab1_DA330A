@@ -1,17 +1,10 @@
-package client;
+package Client;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.InetAddress;
-import java.net.Socket;
-import java.net.UnknownHostException;
-
+import java.io.*;
+import java.net.*;
 public class EchoClient {
     public EchoClient() {
     }
-
     public void establish() {
         Socket echoSocket = null;
         PrintWriter out = null;
@@ -28,10 +21,10 @@ public class EchoClient {
             System.err.println("Couldn't get I/O");
             System.exit(1);
         }
-        BufferedReader stdIn = new BufferedReader(new
+        BufferedReader stdIn = new BufferedReader( new
                 InputStreamReader(System.in));
         String userInput;
-        try {
+        try{
             while ((userInput = stdIn.readLine()) != null) {
                 out.println(userInput);
                 if (userInput.equals("Bye."))

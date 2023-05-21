@@ -1,9 +1,8 @@
-package client;
+package Client;
 
-public class ClientMain extends EchoClient {
+public class Main {
     public static void main(String[] args) {
         EchoClient echoClient = new EchoClient();
-        System.out.println("\u2714 Starting Client");
         echoClient.establish();
     }
 }
